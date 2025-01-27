@@ -17,14 +17,7 @@ public class MakingChange {
         int numWays = 0;
         ArrayList<Integer> coinsArr = new ArrayList<Integer>(coins);
         for(int i = 0; i < coins.length; i++){
-            while((target % coins[i]) != target){
-                if((target % coins[i]) == 0){
-                    numWays++;
-                }
-                else{
-                    coinsArr.remove(i);
-                    return countWays(target, coinsArr.toArray(int[]));
-                }
+
             }
         }
         return numWays;
