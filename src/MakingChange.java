@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * The class Making Change solves a classic problem:
  * given a set of coins, how many ways can you make change for a target amount?
@@ -13,14 +15,15 @@ public class MakingChange {
      */
     public static long countWays(int target, int[] coins) {
         int numWays = 0;
+        ArrayList<Integer> coinsArr = new ArrayList<Integer>(coins);
         for(int i = 0; i < coins.length; i++){
             while((target % coins[i]) != target){
                 if((target % coins[i]) == 0){
                     numWays++;
                 }
                 else{
-                    coins[i] = 0;
-                    return countWays(target, coins);
+                    coinsArr.remove(i);
+                    return countWays(target, coinsArr.toArray(int[]));
                 }
             }
         }
