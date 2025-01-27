@@ -15,7 +15,13 @@ public class MakingChange {
         int numWays = 0;
         for(int i = 0; i < coins.length; i++){
             while((target % coins[i]) != target){
-
+                if((target % coins[i]) == 0){
+                    numWays++;
+                }
+                else{
+                    coins[i] = 0;
+                    return countWays(target, coins);
+                }
             }
         }
         return numWays;
