@@ -31,8 +31,6 @@ public class MakingChange {
         }
         int coin = coins[currentIterator];
         int currentMultiplier = 0;
-        long mypartialSum = 0;
-        int mynumber = 0;
         currentMultiplier = (coin * number);
         if((pSum+currentMultiplier) > currentTarget) {
             return;
