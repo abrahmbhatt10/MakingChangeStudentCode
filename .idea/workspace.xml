@@ -47,7 +47,7 @@
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.MakingChangeTest.executor": "Run",
-    "JUnit.MakingChangeTest.testCorrectSmall.executor": "Run",
+    "JUnit.MakingChangeTest.testCorrectSmall.executor": "Debug",
     "JUnit.MakingChangeTest.testEfficient.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -328,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738168819102</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="code">
+      <option name="closed" value="true" />
+      <created>1738168851290</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1738168851290</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
