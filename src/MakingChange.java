@@ -10,11 +10,13 @@ import java.util.ArrayList;
 
 public class MakingChange {
     private static int lastIterator;
+    private static int[] numArr;
     /**
      * TODO: Complete this function, countWays(), to return the number of ways to make change
      *  for any given total with any given set of coins.
      */
     public static long countWays(int target, int[] coins) {
+        numArr = new int[coins.length];
 
     }
 
@@ -59,7 +61,6 @@ public class MakingChange {
     public static long count(int target, int[] coins){
         int ret = 0;
         int sum = 0;
-        int[] num = new int[coins.length];
         for(int i = 0; i < 2500; i++){
             for(int j = 0; j < 2500; j++){
 
@@ -77,8 +78,24 @@ public class MakingChange {
         return ret;
     }
 
-    public static int[] populateNum(int[] num, int iterator){
+    /*
+        Giving the number of coins for each coin value.
+     */
+    public static void populateNum(){
+        if(lastIterator == 0){
+            for(int i = 0; i < numArr.length; i++){
+                if(i == 0){
+                    numArr[i] = 1;
+                }
+                else{
+                    numArr[i] = 0;
+                }
+            }
+        }
+        else{
 
+        }
+        lastIterator++;
     }
 
     public static long multiplier(int coin, int number) {
