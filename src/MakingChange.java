@@ -34,15 +34,15 @@ public class MakingChange {
         long mypartialSum = 0;
         int mynumber = 0;
         currentMultiplier = (coin * number);
+        if((pSum+currentMultiplier) > currentTarget) {
+            return;
+        }
         if((pSum+currentMultiplier) == currentTarget)
         {
             retCount++;
-            return;
+        } else {
+            multiplier(coins,currentIterator+1,0,currentTarget, pSum+currentMultiplier);
         }
-        else if((pSum+currentMultiplier) > currentTarget) {
-            return;
-        }
-        multiplier(coins,currentIterator+1,0,currentTarget, pSum+currentMultiplier);
         multiplier(coins,currentIterator, number+1,currentTarget, pSum);
     }
 
