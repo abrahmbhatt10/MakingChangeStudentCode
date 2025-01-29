@@ -33,10 +33,12 @@ public class MakingChange {
 
     public static long countTwo(int target, int firstCoin, int secondCoin){
         int ret = 0;
-        for(int i = 0; i < )
+        for(int i = 0; i < 2500; i++){
+            for(int j = 0; j < 2500; j++){
+                if(i * )
+            }
+        }
         return ret;
     }
-
-
 
 }
