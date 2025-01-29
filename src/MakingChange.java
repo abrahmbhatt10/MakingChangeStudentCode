@@ -9,6 +9,7 @@ import java.util.ArrayList;
  */
 
 public class MakingChange {
+    private static int lastIterator;
     /**
      * TODO: Complete this function, countWays(), to return the number of ways to make change
      *  for any given total with any given set of coins.
