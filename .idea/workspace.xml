@@ -47,8 +47,11 @@
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.MakingChangeTest.executor": "Run",
+    "JUnit.MakingChangeTest.testCorrectLarge.executor": "Run",
+    "JUnit.MakingChangeTest.testCorrectLargest.executor": "Run",
     "JUnit.MakingChangeTest.testCorrectSmall.executor": "Run",
     "JUnit.MakingChangeTest.testEfficient.executor": "Run",
+    "JUnit.MakingChangeTest.testEfficientLarge.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -57,7 +60,7 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.MakingChangeTest.testEfficientLarge">
+  <component name="RunManager" selected="JUnit.MakingChangeTest.testCorrectLarge">
     <configuration name="MakingChangeTest.testCorrectLarge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Making Change Student Code" />
       <option name="PACKAGE_NAME" value="" />
@@ -110,11 +113,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MakingChangeTest.testEfficientLarge" />
-        <item itemvalue="JUnit.MakingChangeTest.testEfficient" />
-        <item itemvalue="JUnit.MakingChangeTest.testCorrectLargest" />
         <item itemvalue="JUnit.MakingChangeTest.testCorrectLarge" />
+        <item itemvalue="JUnit.MakingChangeTest.testEfficient" />
         <item itemvalue="JUnit.MakingChangeTest.testCorrectSmall" />
+        <item itemvalue="JUnit.MakingChangeTest.testEfficientLarge" />
+        <item itemvalue="JUnit.MakingChangeTest.testCorrectLargest" />
       </list>
     </recent_temporary>
   </component>
@@ -367,7 +370,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738177577345</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="code">
+      <option name="closed" value="true" />
+      <created>1738177949155</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1738177949155</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
