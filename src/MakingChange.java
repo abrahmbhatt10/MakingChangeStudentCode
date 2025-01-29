@@ -76,6 +76,10 @@ public class MakingChange {
         return ret;
     }
 
+    public static int[] populateNum(int[] num, int iterator){
+
+    }
+
     public static long multiplier(int coin, int number) {
         return coin * number;
     }
