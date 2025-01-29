@@ -25,45 +25,25 @@ public class MakingChange {
         {
             return;
         }
+        if (number > 2500)
+        {
+            return;
+        }
         int coin = coins[currentIterator];
         int currentMultiplier = 0;
         long mypartialSum = 0;
         int mynumber = 0;
-        currentMultiplier += coin;
+        currentMultiplier = (coin * number);
         if((pSum+currentMultiplier) == currentTarget)
         {
             retCount++;
-            pSum = 0;
-            number=0;
-            currentIterator++;
-            multiplier(coins, currentIterator, 0, currentTarget,pSum);
+            return;
         }
         else if((pSum+currentMultiplier) > currentTarget) {
-            currentIterator++;
-            mynumber = number;
-            mypartialSum = pSum;
-            if(currentMultiplier < currentTarget) {
-                pSum = currentMultiplier;
-            } else {
-                pSum = 0;
-            }
-            multiplier(coins,currentIterator+1,0,currentTarget, pSum);
-            number = mynumber++;
-            pSum = mypartialSum;
+            return;
         }
-        else {
-            pSum += currentMultiplier;
-            mypartialSum = pSum;
-            mynumber = number;
-            multiplier(coins,currentIterator+1,0,currentTarget, pSum);
-            number = mynumber++;
-            pSum = mypartialSum;
-        }
-        if (number > 2500) {
-            number = 0;
-            currentIterator++;
-        }
-        multiplier(coins,currentIterator,number,currentTarget, pSum);
+        multiplier(coins,currentIterator+1,0,currentTarget, pSum+currentMultiplier);
+        multiplier(coins,currentIterator, number+1,currentTarget, pSum);
     }
 
 
