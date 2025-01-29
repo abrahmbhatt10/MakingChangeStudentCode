@@ -41,4 +41,23 @@ public class MakingChange {
         return ret;
     }
 
+    public static long countThree(int target, int firstCoin, int secondCoin, int thirdCoin){
+        int ret = 0;
+        for(int i = 0; i < 2500; i++){
+            for(int j = 0; j < 2500; j++){
+                for(int k = 0; k < 2500; k++){
+                    if((i * firstCoin) + (j * secondCoin) + (k * thirdCoin) == target){
+                        ret++;
+                    }
+                }
+            }
+        }
+        return ret;
+    }
+
+    public static long count(int target, int[] coins){
+        int ret = 0;
+
+    }
+
 }
