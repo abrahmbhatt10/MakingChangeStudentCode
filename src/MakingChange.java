@@ -59,7 +59,8 @@ public class MakingChange {
         int ret = 0;
         int sum = 0;
         int coin = 0;
-        for(int i = 0; sum <= target; i++){
+        for(int i = 0; (i < coins.length) && (sum <= target); i++){
+            coin = coins[i];
             for(int j = 0; j < coins.length; j++){
                 coin = coins[j];
                 sum += multiplier(coin, i);
