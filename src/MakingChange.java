@@ -60,4 +60,9 @@ public class MakingChange {
 
     }
 
+    public static long multiplier(int coin, int number) {
+        return coin * number;
+    }
+
+
 }
