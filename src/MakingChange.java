@@ -57,7 +57,14 @@ public class MakingChange {
 
     public static long count(int target, int[] coins){
         int ret = 0;
-
+        int sum = 0;
+        int coin = 0;
+        for(int i = 0; sum <= target; i++){
+            for(int j = 0; j < coins.length; j++){
+                coin = coins[j];
+                sum += multiplier(coin, i);
+            }
+        }
     }
 
     public static long multiplier(int coin, int number) {
