@@ -16,10 +16,27 @@ public class MakingChange {
     public static long countWays(int target, int[] coins) {
         int numWays = 0;
         ArrayList<Integer> coinsArr = new ArrayList<Integer>(coins);
-        for(int i = 0; i < coins.length; i++){
 
-            }
-        }
-        return numWays;
     }
+
+    /*
+    Returns 1, or True, if coin is a factor.
+    Below is one way by using a single coin.
+     */
+    public static long countOne(int target, int coin){
+        int ret = 0;
+        if((target % coin) == 0){
+            ret = 1;
+        }
+        return ret;
+    }
+
+    public static long countTwo(int target, int firstCoin, int secondCoin){
+        int ret = 0;
+        for(int i = 0; i < )
+        return ret;
+    }
+
+
+
 }
