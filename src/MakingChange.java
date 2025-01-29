@@ -14,8 +14,6 @@ public class MakingChange {
      *  for any given total with any given set of coins.
      */
     public static long countWays(int target, int[] coins) {
-        int numWays = 0;
-        ArrayList<Integer> coinsArr = new ArrayList<Integer>(coins);
 
     }
 
@@ -35,7 +33,9 @@ public class MakingChange {
         int ret = 0;
         for(int i = 0; i < 2500; i++){
             for(int j = 0; j < 2500; j++){
-                if(i * )
+                if((i * firstCoin) + (j * secondCoin) == target){
+                    ret++;
+                }
             }
         }
         return ret;
