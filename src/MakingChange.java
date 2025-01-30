@@ -80,6 +80,9 @@ public class MakingChange {
          */
         int coin = coins[currentIterator];
         int currentMultiplier = coin * qty;
+        /**
+         *  The variable partialSum is used to send the value of the earlier coins.
+         */
         if(partialSum+currentMultiplier == currentTarget){
             retCount++;
             return;
@@ -87,7 +90,13 @@ public class MakingChange {
         if(partialSum > currentTarget || partialSum+currentMultiplier > currentTarget){
             return;
         }
+        /**
+         *  Calls itself with the next quantity value
+         */
         multiplier_qty(coins,currentTarget,currentIterator,partialSum,qty+1);
+        /**
+         *  Calls the next coin using the revised partial sum.
+         */
         if((partialSum+currentMultiplier) > 0) {
             multiplier_prefix(coins,currentTarget,currentIterator+1,partialSum+currentMultiplier,0);
         }
