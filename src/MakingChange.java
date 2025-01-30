@@ -16,35 +16,59 @@ public class MakingChange {
      *  for any given total with any given set of coins.
      */
     public static long countWays(int target, int[] coins) {
-          multiplier(coins,0,0, target, 0);
+          retCount = 0;
+          multiplier_coin(coins,target,0, 0);
           return retCount;
     }
 
-    public static void multiplier(int[] coins, int currentIterator, int number, long currentTarget, long pSum) {
-        if(currentIterator >= coins.length)
+    public static void multiplier_coin(int[] coins, long currentTarget, int currentIterator,long partialSum) {
+        if (currentIterator >= coins.length) {
+            return;
+        }
+        if(partialSum > currentTarget){
+            return;
+        }
+        multiplier_qty(coins, currentTarget, currentIterator, partialSum, 0);
+        multiplier_coin(coins, currentTarget, currentIterator + 1, partialSum);
+    }
+    public static void multiplier_qty(int[] coins, long currentTarget, int currentIterator,long partialSum, int qty) {
+        if (qty > 2500)
         {
             return;
         }
-        if (number > 2500)
-        {
+        if(currentIterator >= coins.length){
+            return;
+        }
+        if(partialSum >= currentTarget){
             return;
         }
         int coin = coins[currentIterator];
-        int currentMultiplier = 0;
-        currentMultiplier = (coin * number);
-        if((pSum+currentMultiplier) > currentTarget) {
+        int currentMultiplier = coin * qty;
+        if(partialSum+currentMultiplier == currentTarget){
+            retCount++;
             return;
         }
-        if((pSum+currentMultiplier) == currentTarget)
-        {
-            retCount++;
-        } else {
-            multiplier(coins,currentIterator+1,0,currentTarget, pSum+currentMultiplier);
+        if(partialSum > currentTarget || partialSum+currentMultiplier > currentTarget){
+            return;
         }
-        multiplier(coins,currentIterator, number+1,currentTarget, pSum);
+        multiplier_qty(coins,currentTarget,currentIterator,partialSum,qty+1);
+        if((partialSum+currentMultiplier) > 0) {
+            multiplier_prefix(coins,currentTarget,currentIterator+1,partialSum+currentMultiplier,0);
+        }
     }
-
-
+    public static void multiplier_prefix(int[] coins, long currentTarget, int currentIterator,long partialSum, int qty) {
+        if (qty > 2500)
+        {
+            return;
+        }
+        if(currentIterator >= coins.length){
+            return;
+        }
+        if(partialSum >= currentTarget){
+            return;
+        }
+        multiplier_qty(coins,currentTarget,currentIterator,partialSum,0);
+    }
     /*
     Returns 1, or True, if coin is a factor.
     Below is one way by using a single coin.
