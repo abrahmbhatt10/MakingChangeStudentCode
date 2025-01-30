@@ -12,7 +12,7 @@ import java.util.HashSet;
 public class MakingChange {
     private static long retCount = 0;
     /**
-     * countWays() returnS the number of ways to make change
+     * countWays() returns the number of ways to make change
      *  for any given total with any given set of coins.
      */
     public static long countWays(int target, int[] coins) {
@@ -21,6 +21,11 @@ public class MakingChange {
           return retCount;
     }
 
+    /**
+     * multiplier_coin is a recursive function that returns void
+     * It for-loops through the coins list
+     * It calls the nested loop function multiplier_gty
+     */
     public static void multiplier_coin(int[] coins, long currentTarget, int currentIterator,long partialSum) {
         if (currentIterator >= coins.length) {
             return;
@@ -31,6 +36,7 @@ public class MakingChange {
         multiplier_qty(coins, currentTarget, currentIterator, partialSum, 0);
         multiplier_coin(coins, currentTarget, currentIterator + 1, partialSum);
     }
+
     public static void multiplier_qty(int[] coins, long currentTarget, int currentIterator,long partialSum, int qty) {
         if (qty > 2500)
         {
