@@ -61,7 +61,8 @@ public class MakingChange {
      */
     public static void multiplier_qty(int[] coins, long currentTarget, int currentIterator,long partialSum, int qty) {
         /**
-         * Base case
+         * Base case using constraint of 2500 according to the max value of target
+         *
          */
         if (qty > 2500)
         {
@@ -73,6 +74,10 @@ public class MakingChange {
         if(partialSum >= currentTarget){
             return;
         }
+        /**
+         *  Calculate the current multiplier for the current selected coin and the quantity value.
+         *
+         */
         int coin = coins[currentIterator];
         int currentMultiplier = coin * qty;
         if(partialSum+currentMultiplier == currentTarget){
