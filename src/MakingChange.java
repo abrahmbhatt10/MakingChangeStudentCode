@@ -27,6 +27,7 @@ public class MakingChange {
      * It calls the nested loop function multiplier_qty
      * I reviewed the code at: https://stackoverflow.com/questions/44397474/convert-nested-loop-to-recursion
      * I did this to do the nested for loop recursion.
+     * The multiplier_coin is the outer-most for loop in recursive form
      */
     public static void multiplier_coin(int[] coins, long currentTarget, int currentIterator,long partialSum) {
         if (currentIterator >= coins.length) {
