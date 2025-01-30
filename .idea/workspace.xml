@@ -43,24 +43,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.MakingChangeTest.executor": "Run",
-    "JUnit.MakingChangeTest.testCorrectLarge.executor": "Run",
-    "JUnit.MakingChangeTest.testCorrectLargest.executor": "Run",
-    "JUnit.MakingChangeTest.testCorrectSmall.executor": "Run",
-    "JUnit.MakingChangeTest.testEfficient.executor": "Run",
-    "JUnit.MakingChangeTest.testEfficientLarge.executor": "Run",
-    "JUnit.MakingChangeTest.testEfficientLargest.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.MakingChangeTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MakingChangeTest.testCorrectLarge.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MakingChangeTest.testCorrectLargest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MakingChangeTest.testCorrectSmall.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MakingChangeTest.testEfficient.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MakingChangeTest.testEfficientLarge.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MakingChangeTest.testEfficientLargest.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.MakingChangeTest.testEfficientLargest">
     <configuration name="MakingChangeTest.testCorrectLarge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Making Change Student Code" />
@@ -411,22 +411,35 @@
       <option name="project" value="LOCAL" />
       <updated>1738207177945</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="code">
+      <option name="closed" value="true" />
+      <created>1738211485220</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1738211485220</updated>
+    </task>
+    <task id="LOCAL-00037" summary="code">
+      <option name="closed" value="true" />
+      <created>1738211528513</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1738211528513</updated>
+    </task>
+    <task id="LOCAL-00038" summary="code">
+      <option name="closed" value="true" />
+      <created>1738211730687</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1738211730687</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="code" />
     <option name="LAST_COMMIT_MESSAGE" value="code" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/MakingChange.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
