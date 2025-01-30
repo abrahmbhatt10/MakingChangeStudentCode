@@ -30,16 +30,35 @@ public class MakingChange {
      * The multiplier_coin is the outer-most for loop in recursive form
      */
     public static void multiplier_coin(int[] coins, long currentTarget, int currentIterator,long partialSum) {
+        /**
+         * Base case: After all coins checked, it returns.
+         */
         if (currentIterator >= coins.length) {
             return;
         }
         if(partialSum > currentTarget){
             return;
         }
+        /**
+         * multiplier_qty is the inner loop that goes through different quantity amounts for different coins.
+         */
         multiplier_qty(coins, currentTarget, currentIterator, partialSum, 0);
+        /**
+         * multiplier_coin calls itself with the next coin in the list.
+         */
         multiplier_coin(coins, currentTarget, currentIterator + 1, partialSum);
     }
 
+    /**
+     * @param coins
+     * @param currentTarget
+     * @param currentIterator
+     * @param partialSum
+     * @param qty
+     *
+     * This is the inner nested loop in the recursion.
+     * It increments the class static variable recCount
+     */
     public static void multiplier_qty(int[] coins, long currentTarget, int currentIterator,long partialSum, int qty) {
         if (qty > 2500)
         {
