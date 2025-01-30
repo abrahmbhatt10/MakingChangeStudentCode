@@ -101,6 +101,17 @@ public class MakingChange {
             multiplier_prefix(coins,currentTarget,currentIterator+1,partialSum+currentMultiplier,0);
         }
     }
+
+    /**
+     * @param coins
+     * @param currentTarget
+     * @param currentIterator
+     * @param partialSum
+     * @param qty
+     *
+     * Used to call multiplier quantity with different partial sum values that are based on different quantities of earlier coins.
+     *
+     */
     public static void multiplier_prefix(int[] coins, long currentTarget, int currentIterator,long partialSum, int qty) {
         if (qty > 2500)
         {
