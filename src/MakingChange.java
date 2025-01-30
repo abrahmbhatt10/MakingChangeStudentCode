@@ -60,6 +60,9 @@ public class MakingChange {
      * It increments the class static variable recCount when the sum matches target
      */
     public static void multiplier_qty(int[] coins, long currentTarget, int currentIterator,long partialSum, int qty) {
+        /**
+         * Base case
+         */
         if (qty > 2500)
         {
             return;
