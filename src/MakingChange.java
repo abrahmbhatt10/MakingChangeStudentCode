@@ -57,7 +57,7 @@ public class MakingChange {
      * @param qty
      *
      * This is the inner nested loop in the recursion.
-     * It increments the class static variable recCount
+     * It increments the class static variable recCount when the sum matches target
      */
     public static void multiplier_qty(int[] coins, long currentTarget, int currentIterator,long partialSum, int qty) {
         if (qty > 2500)
