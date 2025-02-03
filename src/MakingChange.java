@@ -14,7 +14,14 @@ public class MakingChange {
      *  for any given total with any given set of coins.
      */
     public static long countWays(int target, int[] coins) {
+        /*
+            Using tabulation method, col 0 will have the coins value
+            Target will be from col 1 to target.
+         */
         long[][] countTable = new long[coins.length][target + 1];
+        /*
+            Sorting the coins from lowest to highest value.
+         */
         Arrays.sort(coins);
         for(int i = 0; i < coins.length; i++){
             countTable[i][0] = coins[i];
