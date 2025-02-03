@@ -27,7 +27,7 @@ public class MakingChange {
             return 0;
         }
         long myCount = 0;
-        int coin = countTable[row][0];
+        int coin = (int) countTable[row][0];
         int myTarget = col - 1;
         if(coin > myTarget){
             countTable[row][col] = 0;
@@ -37,7 +37,7 @@ public class MakingChange {
                 myCount = 1;
             }
         }
-        return myCount + count(target, countTable, row, col - countTable[row][0]) + count(target, countTable, row - 1, col);
+        return myCount + count(target, countTable, row, col - coin) + count(target, countTable, row - 1, col);
     }
 
 }
