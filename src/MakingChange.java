@@ -15,6 +15,128 @@ public class MakingChange {
      */
     public static long countWays(int target, int[] coins) {
         /*
+         * countWays() returns the number of ways to make change
+         *  for any given total with any given set of coins.
+         */
+        //memoisation
+        return countWays_memoisation(target, coins);
+        //tabulation
+        //return countWays_tabulation(target, coins);
+    }
+
+    //bottom up approach
+    public static long countWays_memoisation(int target, int[] coins) {
+        long[][] countTable = new long[coins.length][target + 1];
+        /*
+            Sorting the coins from lowest to highest value.
+            I got it from: https://www.geeksforgeeks.org/arrays-sort-in-java-with-examples/#
+         */
+        Arrays.sort(coins);
+        /*
+            Assigning to column 0 the values of the coins.
+         */
+        for(int i = 0; i < coins.length; i++){
+            countTable[i][0] = coins[i];
+        }
+        for(int i = 0; i < coins.length; i++){
+            for(int j=1; j < target+1; j++) {
+                countTable[i][j] = -1;
+            }
+        }
+        return countMemo(target,countTable,coins.length-1,target);
+    }
+
+    public static long countMemo(int target, long[][] countTable, int row, int col) {
+        /*
+            Below are boundary conditions
+         */
+        if(row < 0 || col < 0)
+        {
+            return 0;
+        }
+        if(row >= countTable.length){
+            return 0;
+        }
+        if(col >= countTable[0].length){
+            return 0;
+        }
+        if(col == 0)
+        {
+            //target is 0
+            return 1;
+        }
+        if(countTable[row][col] != -1) {
+            return countTable[row][col];
+        }
+        /*
+            myCount is 1 when coin is a factor of target
+            excludeCount is the variable that represents value returned by exclude function
+            includeCount is the variable that stores valued returned by include function
+         */
+        long myCount = 0, excludeCount = 0, includeCount = 0;
+        /*
+            Below, coin value is retrieved.
+         */
+        int coin = (int) countTable[row][0];
+        /*
+            Target is retrieved.
+         */
+        int myTarget = col;
+        if(coin > myTarget){
+            myCount = 0;
+        }
+        else{
+            if((myTarget % coin) == 0){
+                myCount = 1;
+            }
+        }
+        /*
+            Below executes exclude function
+         */
+        if(col - coin > 0) {
+            /*
+                excludeCount value is keeping the coin the same, while reducing target value.
+             */
+            if(countTable[row][col-coin] != -1) {
+                excludeCount = countTable[row][col-coin];
+            } else {
+                excludeCount = countMemo(target,countTable,row, col-coin);
+            }
+
+            /*
+                Below prevents double counting for any integer and its multiples
+                If the target is a multiple of a coin, then myCount already counts for that arrangement, which is 1.
+                However, excludeCount ends up counting for that arrangement (or way of reaching target) as well, so we have to make myCount 0 again.
+             */
+            if(col % coin == 0) {
+                myCount = 0;
+            }
+        }
+        /*
+            Below retrieves include function value
+         */
+        if(row-1 >= 0) {
+            /*
+                includeCount keeps target the same, while looking at the previous coin.
+             */
+            if(countTable[row-1][col] != -1) {
+                includeCount = countTable[row-1][col];
+            }
+            else {
+                includeCount = countMemo(target, countTable,row-1, col);
+            }
+        }
+        /*
+            adds up all the ways and returns.
+         */
+        long myTotalCount = myCount+excludeCount+includeCount;
+        countTable[row][col] = myTotalCount;
+        return myTotalCount;
+    }
+
+    //top down approach
+    public static long countWays_tabulation(int target, int[] coins) {
+        /*
             Using tabulation method, col 0 will have the coins value
             Target will be from col 1 to target.
          */

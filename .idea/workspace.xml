@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf08351e-8001-407c-880c-49b47a0a4156" name="Changes" comment="code" />
+    <list default="true" id="bf08351e-8001-407c-880c-49b47a0a4156" name="Changes" comment="code">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MakingChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MakingChange.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,24 +46,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.MakingChangeTest.executor": "Run",
-    "JUnit.MakingChangeTest.testCorrectLarge.executor": "Run",
-    "JUnit.MakingChangeTest.testCorrectLargest.executor": "Run",
-    "JUnit.MakingChangeTest.testCorrectSmall.executor": "Run",
-    "JUnit.MakingChangeTest.testEfficient.executor": "Run",
-    "JUnit.MakingChangeTest.testEfficientLarge.executor": "Run",
-    "JUnit.MakingChangeTest.testEfficientLargest.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.MakingChangeTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MakingChangeTest.testCorrectLarge.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MakingChangeTest.testCorrectLargest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MakingChangeTest.testCorrectSmall.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MakingChangeTest.testEfficient.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MakingChangeTest.testEfficientLarge.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MakingChangeTest.testEfficientLargest.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.MakingChangeTest.testEfficientLargest">
     <configuration name="MakingChangeTest.testCorrectLarge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Making Change Student Code" />
@@ -130,38 +133,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733174949693</updated>
-    </task>
-    <task id="LOCAL-00009" summary="code">
-      <option name="closed" value="true" />
-      <created>1738014370752</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1738014370752</updated>
-    </task>
-    <task id="LOCAL-00010" summary="code">
-      <option name="closed" value="true" />
-      <created>1738015948728</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1738015948728</updated>
-    </task>
-    <task id="LOCAL-00011" summary="code">
-      <option name="closed" value="true" />
-      <created>1738125525685</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1738125525685</updated>
-    </task>
-    <task id="LOCAL-00012" summary="code">
-      <option name="closed" value="true" />
-      <created>1738126036809</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1738126036809</updated>
     </task>
     <task id="LOCAL-00013" summary="code">
       <option name="closed" value="true" />
@@ -523,7 +494,39 @@
       <option name="project" value="LOCAL" />
       <updated>1738561325399</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="code">
+      <option name="closed" value="true" />
+      <created>1738561365105</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1738561365105</updated>
+    </task>
+    <task id="LOCAL-00059" summary="code">
+      <option name="closed" value="true" />
+      <created>1738561508062</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1738561508063</updated>
+    </task>
+    <task id="LOCAL-00060" summary="code">
+      <option name="closed" value="true" />
+      <created>1738562745943</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1738562745943</updated>
+    </task>
+    <task id="LOCAL-00061" summary="code">
+      <option name="closed" value="true" />
+      <created>1738562758497</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1738562758497</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
