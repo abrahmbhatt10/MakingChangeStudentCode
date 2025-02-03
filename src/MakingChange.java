@@ -99,7 +99,7 @@ public class MakingChange {
             /*
                 Below prevents double counting for any integer and its multiples
                 If the target is a multiple of a coin, then myCount already counts for that arrangement, which is 1.
-                However, excludeCount ends up counting for that arrangement as well, so we have to make myCount 0 again.
+                However, excludeCount ends up counting for that arrangement (or way of reaching target) as well, so we have to make myCount 0 again.
              */
             if(col % coin == 0) {
                 myCount = 0;
