@@ -24,18 +24,27 @@ public class MakingChange {
             I got it from: https://www.geeksforgeeks.org/arrays-sort-in-java-with-examples/#
          */
         Arrays.sort(coins);
+        /*
+            Assigning to column 0 the values of the coins.
+         */
         for(int i = 0; i < coins.length; i++){
             countTable[i][0] = coins[i];
         }
-        int coin = 0;
-        int myTarget = 0;
-        int myCount = 0;
+        /*
+            Below is the main loop that iterates and fills in the table through tabulation method
+         */
         for(int i = 0; i < coins.length; i++) {
             for(int j= 1; j < target+1; j++) {
                     countTable[i][j] = getMyCount(target,countTable,i,j);
+                    /*
+                        Below is print code for debugging purposes.
+                     */
                     //System.out.println("coin "+countTable[i][0]+" pos "+i+":"+j+" value "+countTable[i][j]);
             }
         }
+        /*
+            Below returns the final entry in the table
+         */
         return countTable[coins.length-1][target];
     }
     public static long getMyCount(int target, long[][] countTable, int row, int col) {
