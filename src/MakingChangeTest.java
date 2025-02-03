@@ -24,19 +24,19 @@ public class MakingChangeTest {
     }
 
     @Test
-    @Timeout(value = 15000, unit = TimeUnit.MILLISECONDS)
+    @Timeout(value = 150, unit = TimeUnit.MILLISECONDS)
     public void testEfficient() {
         setTestData(4);
     }
 
     @Test
-    @Timeout(value = 15000, unit = TimeUnit.MILLISECONDS)
+    @Timeout(value = 150, unit = TimeUnit.MILLISECONDS)
     public void testEfficientLarge() {
         setTestData(5);
     }
 
     @Test
-    @Timeout(value = 15000, unit = TimeUnit.MILLISECONDS)
+    @Timeout(value = 150, unit = TimeUnit.MILLISECONDS)
     public void testEfficientLargest() {
         setTestData(6);
     }

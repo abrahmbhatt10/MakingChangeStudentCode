@@ -53,10 +53,10 @@
     "JUnit.MakingChangeTest.executor": "Run",
     "JUnit.MakingChangeTest.testCorrectLarge.executor": "Run",
     "JUnit.MakingChangeTest.testCorrectLargest.executor": "Run",
-    "JUnit.MakingChangeTest.testCorrectSmall.executor": "Debug",
+    "JUnit.MakingChangeTest.testCorrectSmall.executor": "Run",
     "JUnit.MakingChangeTest.testEfficient.executor": "Run",
     "JUnit.MakingChangeTest.testEfficientLarge.executor": "Run",
-    "JUnit.MakingChangeTest.testEfficientLargest.executor": "Debug",
+    "JUnit.MakingChangeTest.testEfficientLargest.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -65,22 +65,22 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.MakingChangeTest.testCorrectSmall">
-    <configuration name="MakingChangeTest.testCorrectLargest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MakingChangeTest.testEfficientLargest">
+    <configuration name="MakingChangeTest.testCorrectLarge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Making Change Student Code" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MakingChangeTest" />
-      <option name="METHOD_NAME" value="testCorrectLargest" />
+      <option name="METHOD_NAME" value="testCorrectLarge" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MakingChangeTest.testCorrectSmall" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MakingChangeTest.testCorrectLargest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Making Change Student Code" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MakingChangeTest" />
-      <option name="METHOD_NAME" value="testCorrectSmall" />
+      <option name="METHOD_NAME" value="testCorrectLargest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,11 +118,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MakingChangeTest.testCorrectSmall" />
         <item itemvalue="JUnit.MakingChangeTest.testEfficientLargest" />
-        <item itemvalue="JUnit.MakingChangeTest.testCorrectLargest" />
         <item itemvalue="JUnit.MakingChangeTest.testEfficientLarge" />
         <item itemvalue="JUnit.MakingChangeTest.testEfficient" />
+        <item itemvalue="JUnit.MakingChangeTest.testCorrectLargest" />
+        <item itemvalue="JUnit.MakingChangeTest.testCorrectLarge" />
       </list>
     </recent_temporary>
   </component>
@@ -134,14 +134,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733174949693</updated>
-    </task>
-    <task id="LOCAL-00006" summary="code">
-      <option name="closed" value="true" />
-      <created>1738013550839</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1738013550839</updated>
     </task>
     <task id="LOCAL-00007" summary="code">
       <option name="closed" value="true" />
@@ -527,7 +519,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738546681166</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="code">
+      <option name="closed" value="true" />
+      <created>1738549922737</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1738549922737</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -539,8 +539,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/MakingChange.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="1" />
+          <line>26</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/MakingChange.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/MakingChange.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

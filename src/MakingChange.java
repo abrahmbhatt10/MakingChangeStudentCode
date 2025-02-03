@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * The class Making Change solves a classic problem:
  * given a set of coins, how many ways can you make change for a target amount?
@@ -12,40 +14,41 @@ public class MakingChange {
      *  for any given total with any given set of coins.
      */
     public static long countWays(int target, int[] coins) {
-        long[][] countTable = new long[coins.length + 1][target + 2];
-        for(int i = 0; i < countTable.length; i++){
-            for(int j= 0; j < countTable[0].length; j++)
-            {
-                countTable[i][j] = -1;
+        long[][] countTable = new long[coins.length][target + 1];
+        Arrays.sort(coins);
+        for(int i = 0; i < coins.length; i++){
+            countTable[i][0] = coins[i];
+        }
+        int coin = 0;
+        int myTarget = 0;
+        int myCount = 0;
+        for(int i = 0; i < coins.length; i++) {
+            for(int j= 1; j < target+1; j++) {
+                    countTable[i][j] = getMyCount(target,countTable,i,j);
+                    //System.out.println("coin "+countTable[i][0]+" pos "+i+":"+j+" value "+countTable[i][j]);
             }
         }
-        for(int i = 1; i < coins.length + 1; i++){
-            countTable[i][0] = coins[i - 1];
-        }
-        return count(target, countTable, coins.length, target + 1);
+        return countTable[coins.length-1][target];
     }
-
-    public static long count(int target, long[][] countTable, int row, int col){
-        if((row < 0) || (row >= countTable.length)){
+    public static long getMyCount(int target, long[][] countTable, int row, int col) {
+        if(row < 0 || col < 0)
+        {
             return 0;
         }
-        if((col < 0) || (col >= countTable[0].length)){
+        if(row >= countTable.length){
+            return 0;
+        }
+        if(col >= countTable[0].length){
             return 0;
         }
         if(col == 0)
         {
-            return 0;
-        }
-        if(col == 1){
             //target is 0
-            return 0;
+            return 1;
         }
-        if(countTable[row][col] != -1){
-            return countTable[row][col];
-        }
-        long myCount = 0;
+        long myCount = 0, excludeCount = 0, includeCount = 0;
         int coin = (int) countTable[row][0];
-        int myTarget = col - 1;
+        int myTarget = col;
         if(coin > myTarget){
             myCount = 0;
         }
@@ -54,8 +57,16 @@ public class MakingChange {
                 myCount = 1;
             }
         }
-        long myTotalCount =  myCount + count(target, countTable, row, col - coin) + count(target, countTable, row - 1, col);
-        countTable[row][col] = myTotalCount;
+        if(col - coin > 0) {
+            excludeCount = countTable[row][col-coin];
+            if(col % coin == 0) {
+                myCount = 0;
+            }
+        }
+        if(row-1 >= 0) {
+            includeCount = countTable[row-1][col];
+        }
+        long myTotalCount = myCount+excludeCount+includeCount;
         return myTotalCount;
     }
 }
