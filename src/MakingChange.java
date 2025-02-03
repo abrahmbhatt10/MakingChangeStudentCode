@@ -26,8 +26,15 @@ public class MakingChange {
         if((col < 0) || (col >= countTable[0].length)){
             return 0;
         }
-        if(row == 1){
-
+        long myCount = 0;
+        int coin = countTable[row][0];
+        if(coin > col - 1){
+            countTable[row][col] = 0;
+        }
+        else{
+            if(((col - 1) % coin) == 0){
+                myCount = 1;
+            }
         }
         return count(target, countTable, row, col - countTable[row][0]) + count(target, countTable, row - 1, col);
     }
