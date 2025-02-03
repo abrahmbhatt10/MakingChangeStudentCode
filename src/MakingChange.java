@@ -21,6 +21,7 @@ public class MakingChange {
         long[][] countTable = new long[coins.length][target + 1];
         /*
             Sorting the coins from lowest to highest value.
+            I got it from: https://www.geeksforgeeks.org/arrays-sort-in-java-with-examples/#
          */
         Arrays.sort(coins);
         for(int i = 0; i < coins.length; i++){
