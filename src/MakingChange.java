@@ -19,7 +19,7 @@ public class MakingChange {
         return count(target, countTable, coins.length, target + 1);
     }
 
-    public static long count(int target, int[][] countTable, int row, int col){
+    public static long count(int target, long[][] countTable, int row, int col){
         if((row < 0) || (row >= countTable.length)){
             return 0;
         }
