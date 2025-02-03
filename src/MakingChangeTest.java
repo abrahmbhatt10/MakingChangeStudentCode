@@ -50,7 +50,7 @@ public class MakingChangeTest {
             // Read in the data, then run.
             long answer = Long.parseLong(answerReader.readLine());
             loadTest(testReader);
-            assertEquals(answer, OldMakingChange.countWays(target, coins),
+            assertEquals(answer, MakingChange.countWays(target, coins),
                     "Test " + testNumber + " failed: should return " + answer);
 
         } catch (IOException e) {
