@@ -48,6 +48,9 @@ public class MakingChange {
         return countTable[coins.length-1][target];
     }
     public static long getMyCount(int target, long[][] countTable, int row, int col) {
+        /*
+            Below are boundary conditions
+         */
         if(row < 0 || col < 0)
         {
             return 0;
@@ -63,8 +66,19 @@ public class MakingChange {
             //target is 0
             return 1;
         }
+        /*
+            myCount is 1 when coin is a factor of target
+            excludeCount is the variable that represents value returned by exclude function
+            includeCount is the variable that stores valued returned by include function
+         */
         long myCount = 0, excludeCount = 0, includeCount = 0;
+        /*
+            Below, coin value is retrieved.
+         */
         int coin = (int) countTable[row][0];
+        /*
+            Target is retrieved.
+         */
         int myTarget = col;
         if(coin > myTarget){
             myCount = 0;
@@ -74,15 +88,35 @@ public class MakingChange {
                 myCount = 1;
             }
         }
+        /*
+            Below executes exclude function
+         */
         if(col - coin > 0) {
+            /*
+                excludeCount value is keeping the coin the same, while reducing target value.
+             */
             excludeCount = countTable[row][col-coin];
+            /*
+                Below prevents double counting for any integer and its multiples
+                If the target is a multiple of a coin, then myCount already counts for that arrangement, which is 1.
+                However, excludeCount ends up counting for that arrangement as well, so we have to make myCount 0 again.
+             */
             if(col % coin == 0) {
                 myCount = 0;
             }
         }
+        /*
+            Below retrieves include function value
+         */
         if(row-1 >= 0) {
+            /*
+                includeCount keeps target the same, while looking at the previous coin.
+             */
             includeCount = countTable[row-1][col];
         }
+        /*
+            adds up all the ways and returns.
+         */
         long myTotalCount = myCount+excludeCount+includeCount;
         return myTotalCount;
     }
