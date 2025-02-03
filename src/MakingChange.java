@@ -28,15 +28,16 @@ public class MakingChange {
         }
         long myCount = 0;
         int coin = countTable[row][0];
-        if(coin > col - 1){
+        int myTarget = col - 1;
+        if(coin > myTarget){
             countTable[row][col] = 0;
         }
         else{
-            if(((col - 1) % coin) == 0){
+            if((myTarget % coin) == 0){
                 myCount = 1;
             }
         }
-        return count(target, countTable, row, col - countTable[row][0]) + count(target, countTable, row - 1, col);
+        return myCount + count(target, countTable, row, col - countTable[row][0]) + count(target, countTable, row - 1, col);
     }
 
 }
