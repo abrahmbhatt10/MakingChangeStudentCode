@@ -38,14 +38,23 @@ public class MakingChange {
         for(int i = 0; i < coins.length; i++){
             countTable[i][0] = coins[i];
         }
+        /*
+            Initializes every cell to -1.
+         */
         for(int i = 0; i < coins.length; i++){
             for(int j=1; j < target+1; j++) {
                 countTable[i][j] = -1;
             }
         }
+        /*
+            Memoization goes from bottom up.
+            passing the last cell parameters.
+         */
         return countMemo(target,countTable,coins.length-1,target);
     }
-
+    /*
+        countMemo is a recursive function that returns the count ways to add up to the target.
+     */
     public static long countMemo(int target, long[][] countTable, int row, int col) {
         /*
             Below are boundary conditions
