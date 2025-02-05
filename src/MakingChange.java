@@ -103,22 +103,22 @@ public class MakingChange {
             }
         }
         /*
-            Below executes exclude function
+            Below executes include function
          */
         if(col - coin > 0) {
             /*
-                excludeCount value is keeping the coin the same, while reducing target value.
+                includeCount value is keeping the coin the same, while reducing target value.
              */
             if(countTable[row][col-coin] != -1) {
                 /*
-                    excludeCount already calculated.
+                    includeCount already calculated.
                  */
-                excludeCount = countTable[row][col-coin];
+                includeCount = countTable[row][col-coin];
             } else {
                 /*
-                    excludeCount not calculated, so calling the function.
+                    includeCount not calculated, so calling the function.
                  */
-                excludeCount = countMemo(target,countTable,row, col-coin);
+                includeCount = countMemo(target,countTable,row, col-coin);
             }
 
             /*
@@ -131,23 +131,23 @@ public class MakingChange {
             }
         }
         /*
-            Below retrieves include function value
+            Below retrieves exclude function value
          */
         if(row-1 >= 0) {
             /*
-                includeCount keeps target the same, while looking at the previous coin.
+                excludeCount keeps target the same, while looking at the previous coin.
              */
             if(countTable[row-1][col] != -1) {
                 /*
-                    includeCount previously calculated.
+                    excludeCount previously calculated.
                  */
-                includeCount = countTable[row-1][col];
+                excludeCount = countTable[row-1][col];
             }
             else {
                 /*
-                    includeCount not calculated, so keeping the target same while going to the previous coin.
+                    excludeCount not calculated, so keeping the target same while going to the previous coin.
                  */
-                includeCount = countMemo(target, countTable,row-1, col);
+                excludeCount = countMemo(target, countTable,row-1, col);
             }
         }
         /*
@@ -238,13 +238,13 @@ public class MakingChange {
             }
         }
         /*
-            Below executes exclude function
+            Below executes include function
          */
         if(col - coin > 0) {
             /*
-                excludeCount value is keeping the coin the same, while reducing target value.
+                includeCount value is keeping the coin the same, while reducing target value.
              */
-            excludeCount = countTable[row][col-coin];
+            includeCount = countTable[row][col-coin];
             /*
                 Below prevents double counting for any integer and its multiples
                 If the target is a multiple of a coin, then myCount already counts for that arrangement, which is 1.
@@ -255,13 +255,13 @@ public class MakingChange {
             }
         }
         /*
-            Below retrieves include function value
+            Below retrieves exclude function value
          */
         if(row-1 >= 0) {
             /*
-                includeCount keeps target the same, while looking at the previous coin.
+                excludeCount keeps target the same, while looking at the previous coin.
              */
-            includeCount = countTable[row-1][col];
+            excludeCount = countTable[row-1][col];
         }
         /*
             adds up all the ways and returns.
