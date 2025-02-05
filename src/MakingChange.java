@@ -74,6 +74,9 @@ public class MakingChange {
             //target is 0
             return 1;
         }
+        /*
+            If we have calculated the value previously, retrieve from the array and return.
+         */
         if(countTable[row][col] != -1) {
             return countTable[row][col];
         }
@@ -107,8 +110,14 @@ public class MakingChange {
                 excludeCount value is keeping the coin the same, while reducing target value.
              */
             if(countTable[row][col-coin] != -1) {
+                /*
+                    excludeCount already calculated.
+                 */
                 excludeCount = countTable[row][col-coin];
             } else {
+                /*
+                    excludeCount not calculated, so calling the function.
+                 */
                 excludeCount = countMemo(target,countTable,row, col-coin);
             }
 
@@ -129,9 +138,15 @@ public class MakingChange {
                 includeCount keeps target the same, while looking at the previous coin.
              */
             if(countTable[row-1][col] != -1) {
+                /*
+                    includeCount previously calculated.
+                 */
                 includeCount = countTable[row-1][col];
             }
             else {
+                /*
+                    includeCount not calculated, so keeping the target same while going to the previous coin.
+                 */
                 includeCount = countMemo(target, countTable,row-1, col);
             }
         }
@@ -139,6 +154,9 @@ public class MakingChange {
             adds up all the ways and returns.
          */
         long myTotalCount = myCount+excludeCount+includeCount;
+        /*
+            We have calculated the count, storing it in table.
+         */
         countTable[row][col] = myTotalCount;
         return myTotalCount;
     }
