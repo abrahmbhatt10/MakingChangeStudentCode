@@ -19,9 +19,9 @@ public class MakingChange {
          *  for any given total with any given set of coins.
          */
         //memoisation
-        return countWays_memoisation(target, coins);
+        //return countWays_memoisation(target, coins);
         //tabulation
-        //return countWays_tabulation(target, coins);
+        return countWays_tabulation(target, coins);
     }
 
     //bottom up approach
